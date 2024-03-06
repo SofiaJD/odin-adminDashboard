@@ -12,6 +12,7 @@ body
 {
     margin: 0;
     font-family: 'montserrat';
+    background-color: #d7d7d7;
 }
 
 #mainContainer
@@ -24,25 +25,33 @@ body
 
 #navbar
 {
-    background-color: yellow;
+    background-color: white;
     grid-column: 2;
+    grid-row: 1;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
+    box-shadow: 0 0px 10px rgb(193, 193, 193);
 }
 
 #navbar .section
 {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    align-items: center;
+    padding: 5px 40px;
+    height: 50%;
 }
 
-#navbar .section.one
+#navbar .section.one #search 
 {
-    padding: 20px 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #navbar .section.one #search input[type="search"]
 {
+    background-color: #e6e1f6;
     padding: 5px;
     height: 30px;
     width: 500px;
@@ -50,16 +59,92 @@ body
     border-radius: 15px;
 }
 
+#navbar .section.one #search .material-symbols-outlined
+{
+    margin-right: 10px;
+    font-size: 25px;
+    font-variation-settings:
+    'wght' 300
+}
+
 #navbar .section.one #user 
 {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}
+
+#navbar .section.one #user .material-symbols-outlined
+{
+    margin-right: 20px;
+    font-size: 30px;
 }
 
 #navbar .section.one #user #userName
 {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    align-items: center;
+    font-weight: 500;
+
+}
+
+#navbar .section.one #user #userName .img
+{
+    background-color: #e6e1f6; 
+    color: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+#navbar .section.two
+{
+    margin-top: -10px;
+}
+
+#navbar .section.two #userInfo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16px;
+}
+
+#navbar .section.two #userInfo .img
+{
+    background-color: #e6e1f6;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    grid-row: 1 / span 2;
+    margin-right: 20px;
+}
+
+#navbar .section.two #userInfo #userInfoInfo h2
+{
+    margin-top: -10px;    
+    font-size: 20px;
+}
+
+#navbar .section.two #buttons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#navbar .section.two #buttons button
+{
+    width: 95px;
+    padding: 6px 0;
+    border: none;
+    border-radius: 30px;
+    background-color: #a78bfa;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
 }
 
 #sidebar
@@ -99,5 +184,6 @@ body
     background-color: gray;
     grid-column: 2;
     grid-row: 2;
+    margin-top: 100px;
 }
 
