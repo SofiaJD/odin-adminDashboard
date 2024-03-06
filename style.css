@@ -12,7 +12,7 @@ body
 {
     margin: 0;
     font-family: 'montserrat';
-    background-color: #d7d7d7;
+    background-color: #e6e1f6;
 }
 
 #mainContainer
@@ -30,7 +30,7 @@ body
     grid-row: 1;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    box-shadow: 0 0px 10px rgb(193, 193, 193);
+    box-shadow: 0 0px 10px rgb(207, 207, 207);
 }
 
 #navbar .section
@@ -101,7 +101,7 @@ body
 
 #navbar .section.two
 {
-    margin-top: -10px;
+    margin-top: -15px;
 }
 
 #navbar .section.two #userInfo
@@ -181,9 +181,135 @@ body
 
 #container
 {
-    background-color: gray;
+    background-color: #e6e1f6;
     grid-column: 2;
     grid-row: 2;
-    margin-top: 100px;
+    margin: 10px 0px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
 }
 
+#container #proyects 
+{
+    grid-row: 1 / span 2;
+    padding: 0px 15px;
+}
+
+#container #proyects #proyectsContainer 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px 10px;
+}
+
+#container .card
+{
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(80, 80, 80);
+    display: grid;
+    box-shadow: 5px 5px 5px #dcd7eb;
+    border-left: solid 5px #a78bfa;
+}
+
+#container #proyects #proyectsContainer .card h4
+{
+    font-size: 15px;
+    color: black;
+}
+
+#container #proyects #proyectsContainer .card p
+{
+    margin-top: -5px;
+}
+
+#container #proyects #proyectsContainer .card .actions
+{
+   justify-self: end;
+}
+
+#container #proyects #proyectsContainer .card .material-symbols-outlined
+{
+    font-size: 22px;
+    color: black;
+    font-variation-settings:
+    'wght' 300
+}
+
+#container #announcements
+{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#container #announcements .card
+{
+    margin-right: 25px;
+    border-left: none;
+    font-size: 12px;
+    padding: 10px 30px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#container #announcements .card h5
+{
+    color: black;
+}
+
+#container #announcements .card hr
+{
+    color: #e6e6e6;
+    border: solid 1px ;
+}
+
+#container #trending
+{
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: -20px;
+}
+
+#container #trending .card
+{
+    margin-right: 25px;
+    border-left: none;
+    font-size: 12px;
+    padding: 10px 30px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+
+#container #trending .card .user
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#container #trending .card .user .img
+{
+    background-color: #a78bfa;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: transparent;
+    margin-right: 10px;
+}
+
+#container #trending .card .user .userName
+{
+    font-weight: 600;
+}
+
+#container #trending .card .user .title
+{
+    color: rgb(147, 147, 147);
+}
